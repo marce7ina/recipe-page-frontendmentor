@@ -1,0 +1,146 @@
+/**                       colors                            **/
+:root {
+  --white: hsl(0, 0%, 100%);
+  --rose-white: hsl(330, 100%, 98%);
+  --eggshell: hsl(30, 54%, 90%);
+  --light-grey: hsl(30, 18%, 87%);
+  --wenge-brown: hsl(30, 10%, 34%);
+  --dark-charcoal: hsl(24, 5%, 18%);
+  --nutmeg: hsl(14, 45%, 36%);
+  --dark-rasberry: hsl(332, 51%, 32%);
+}
+/**                  end of colors                    **/
+
+/**                 main site settings                 **/
+html {
+  font-family: "Outfit", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--eggshell);
+  line-height: 2em;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#main {
+  background-color: var(--white);
+  width: 700px;
+  border-radius: 20px;
+  padding: 30px;
+  margin: 50px;
+}
+img {
+  width: 100%;
+  border-radius: 10px;
+}
+.padding {
+  display: unset;
+}
+/**                   end of main site settings              **/
+
+/**                       text attributes                 **/
+.title {
+  font-family: "Young Serif", serif;
+  color: var(--nutmeg);
+}
+.main-title {
+  color: var(--dark-charcoal);
+}
+
+p,
+li {
+  color: var(--wenge-brown);
+}
+
+.preparation-time {
+  background-color: var(--rose-white);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.preparation-time > h3 {
+  color: var(--dark-rasberry);
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.border {
+  border-bottom: 1pt solid var(--light-grey);
+  margin: 30px 0;
+}
+
+/**                  end of text attributes                  **/
+
+/**unordered lists and ordered lists markers and their settings**/
+
+.preparation-time li::marker {
+  color: var(--dark-rasberry);
+}
+
+.ingredients li::marker,
+.instructions li::marker {
+  color: var(--nutmeg);
+  font-weight: bold;
+}
+
+li {
+  padding: 0 20px;
+  margin: 0 20px;
+}
+ul,
+ol {
+  padding: 0 10px;
+}
+
+/**              end of ul and li settings            **/
+
+/**                table attributes                 **/
+table {
+  border-collapse: collapse;
+}
+
+th,
+td {
+  width: 100%;
+  text-align: left;
+}
+
+td {
+  color: var(--nutmeg);
+  font-weight: 700;
+  padding-right: 250px;
+}
+
+th {
+  padding: 5px 50px;
+  font-weight: normal;
+  color: var(--wenge-brown);
+}
+
+/**             end of table atributes           **/
+
+/**                 media queries                     **/
+@media screen and (max-width: 764px) {
+  #main {
+    width: fit-content;
+    border-radius: 0;
+    margin: 0;
+    padding: 5%;
+  }
+  body {
+    margin: 0;
+  }
+  img {
+    border-radius: 0;
+  }
+  th {
+    padding: 5px 20px;
+  }
+  td {
+    padding-right: 20px;
+  }
+}
